@@ -8,7 +8,7 @@ package Stack;
 * -> Finite Capacity
 * 	>> Memory management issues
 * 	>> Application logic issues
-* 	>> Running time : O(n) for both pop and push running times  
+* 	>> Running time : O(1) for both pop and push running times  
 *  @author Ee En Goh
 */
 public class ArrayStack<E> implements Stack<E>{
