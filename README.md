@@ -21,9 +21,9 @@ Abstract Data Type (ADT)  |   Description
 
 #### Comparing Different Implementations :
 
-Base | Array-Based    | Linked-Based
+Base | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Stack/ArrayStack.java)    | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Stack/LinkedStack.java)
 ---------|---------------|--------------
 Capacity | Finite   | Infinite
 Storing Method | Hold the objects pushed into stack | Objects stored in special 'nodes' that link to the next object
-Reference to ***top*** element | Stack size (-1 if empty) | Trace the reference of new inserted or removed node (element)
+Reference to ***top*** element | Stack size (-1 if empty) | Trace the reference of new inserted or removed [node](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Stack/Node.java) (element)
 Runtime | O(1)  | O(1)
