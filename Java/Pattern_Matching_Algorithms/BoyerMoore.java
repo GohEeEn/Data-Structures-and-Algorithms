@@ -1,4 +1,4 @@
-package Searching_Algorithms;
+package Pattern_Matching_Algorithms;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.TreeMap;
  * - Enhancement of Brute-Force Pattern Matching Algorithm, that reduce the redundant comparison 
  * by pre-processing pattern P, with last occurrence function that list out 
  * all the unique character last occurrence in text T<br>
- * - Run-Time : O(nm), while significantly faster than Brute-Force Algorithm in English<br>
+ * - Run-Time : O(nm), while significantly faster than Brute-Force Algorithm in Englishw<br>
  * @author Ee En Goh
  */
 public class BoyerMoore {

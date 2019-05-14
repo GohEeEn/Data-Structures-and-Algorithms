@@ -24,7 +24,7 @@ package Searching_Algorithms;
 		c		Number of comparison needed in the worst case before a recursive call is needed again
 */
 
-public class Binary_Search{
+public class BinarySearch{
 	 
 	/**
 	*	Searching algorithm of a recursive binary search

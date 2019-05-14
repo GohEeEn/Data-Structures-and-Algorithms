@@ -1,5 +1,7 @@
 package Vector;
 
+import java.util.Iterator;
+
 /**
  * Linked-implementation of data structure vector
  * - Objects stored in special nodes
@@ -221,4 +223,29 @@ public class LinkedVector<T> implements Vector<T>{
 		
 		return removed;
 	}
+
+	 @Override
+	    public Iterator<T> iterator() {
+	        return new Iterator<T>() {
+	            private Node<T> current;
+
+	            @Override
+	            public boolean hasNext() {
+	                if (isEmpty()) return false;
+	                if (current == null) return true;
+	                return !current.equals(rear);
+	            }
+
+	            @Override
+	            public T next() {
+	                if (current == null) {
+	                    current = front;
+	                } else {
+	                    current = current.getNext();
+	                }
+	                return current.getData();
+
+	            }
+	        };
+	    }
 }

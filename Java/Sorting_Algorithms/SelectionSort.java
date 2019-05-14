@@ -2,7 +2,7 @@ package Sorting_Algorithms;
 
 /* Selection Sort */
 
-public class selectionsort{
+public class SelectionSort{
 	
 	public int[] sort(int[] A){
 		
