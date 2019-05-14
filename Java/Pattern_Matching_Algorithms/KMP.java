@@ -1,4 +1,4 @@
-package Searching_Algorithms;
+package Pattern_Matching_Algorithms;
 
 /**
  * Knuth-Morris-Platt Pattern Matching Algorithm<br>

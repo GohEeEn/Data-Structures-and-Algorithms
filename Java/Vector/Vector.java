@@ -8,7 +8,7 @@ package Vector;
  * - Object ranks change 
  * @author Ee En Goh 
  */
-public interface Vector<T> {
+public interface Vector<T> extends Iterable<T>{
 	
 	// ----- Support Operations -----
 	
