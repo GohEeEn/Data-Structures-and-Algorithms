@@ -7,7 +7,7 @@
     * front : The reference where the next item to be *dequeued (removed)*
     * rear  : The reference where the last item was *enqueued (inserted)*
 
-![Standard Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Images/Queue.jpg)
+![Standard Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/img/Queue.jpg)
 
 ## Abstract Data Type :
 

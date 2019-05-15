@@ -4,7 +4,7 @@
 
 * Insertion is carried out relative to a position or a known fixed point
 * Example, insert ***Chelsea*** before the position where ***Liverpool*** is stored *or* after the position of ***Stockport***.
-![List Example](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Images/List_1.jpg)
+![List Example](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/img/List_1.jpg)
 * It requires 2 position references at the **first and last position** for list traversal purpose
 
 ### Abstract Data Type :
