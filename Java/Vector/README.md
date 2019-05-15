@@ -1,5 +1,5 @@
 
-# [Vector](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Vector)
+# [Vector](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Vector/Vector.java)
 
 > It is a sequence ADT that supports the insertion, removal and accessing of objects based on **rank**
 

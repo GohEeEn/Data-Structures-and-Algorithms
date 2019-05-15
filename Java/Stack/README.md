@@ -1,4 +1,4 @@
-# [Stack](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Stack)
+# [Stack](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Stack/Stack.java)
 
 > A container of values / objects which do the insertion and removal of elements based on **Last-In-First-Out (LIFO)** principle
 

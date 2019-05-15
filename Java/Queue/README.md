@@ -1,4 +1,4 @@
-# [Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Queue)
+# [Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Queue/Queue.java)
 
 > A container of values / objects which does the insertion and removal of elements based on **First-In-First-Out (FIFO)** principle
 
@@ -7,7 +7,7 @@
     * front : The reference where the next item to be *dequeued (removed)*
     * rear  : The reference where the last item was *enqueued (inserted)*
 
-![Standard Queue](/Data-Structures-and-Algorithms/images/Queue.jpg)
+![Standard Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Images/Queue.jpg)
 
 ## Abstract Data Type :
 
