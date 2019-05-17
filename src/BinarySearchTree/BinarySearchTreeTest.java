@@ -3,19 +3,21 @@ package BinarySearchTree;
 public class BinarySearchTreeTest {
     public static void main(String[] args) {
         testInsertion();
+        System.out.println(basicTree().toString());
+        
         testExternalChildrenRemoval();
-        testExternalRightChildRemoval();
-        testExternalLeftChildRemoval();
-        testInternalChildrenRemoval();
-        testFindValue();
-        testNoFindValue();
+//        testExternalRightChildRemoval();
+//        testExternalLeftChildRemoval();
+//        testInternalChildrenRemoval();
+//        testFindValue();
+//        testNoFindValue();
 
         System.out.println(basicTree().toString());
     }
 
     private static void testNoFindValue() {
         BinarySearchTree<Integer> tree = basicTree();
-        Integer value = tree.find(15);
+        Integer value = tree.locate(15);
         if (value != null) {
             System.out.println("testNoFindValue(): FAILURE");
             System.out.println("method was meant to return null, but it returned: " + value);
@@ -26,7 +28,7 @@ public class BinarySearchTreeTest {
 
     private static void testFindValue() {
         BinarySearchTree<Integer> tree = basicTree();
-        Integer value = tree.find(2);
+        Integer value = tree.locate(2);
         if (value != 2) {
             System.out.println("testNoFindValue(): FAILURE");
             System.out.println("method was meant to return 2, but it returned: " + value);
@@ -53,7 +55,7 @@ public class BinarySearchTreeTest {
      */
     public static void testInsertion() {
         BinarySearchTree<Integer> tree = basicTree();
-        if (tree.size() != 5) {
+        if (tree.size() != 9) {
             System.out.println("testInsertion(): FAILURE");
             System.out.println("Expected tree to contain 5 values, but it contains: "+ tree.size());
         } else {

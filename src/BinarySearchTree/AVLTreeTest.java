@@ -15,7 +15,7 @@ public class AVLTreeTest {
 
     private static void testNoFindValue() {
         AVLTree<Integer> tree = basicTree();
-        Integer value = tree.find(15);
+        Integer value = tree.locate(15);
         if (value != null) {
             System.out.println("testNoFindValue(): FAILURE");
             System.out.println("method was meant to return null, but it returned: " + value);
@@ -26,7 +26,7 @@ public class AVLTreeTest {
 
     private static void testFindValue() {
         AVLTree<Integer> tree = basicTree();
-        Integer value = tree.find(2);
+        Integer value = tree.locate(2);
         if (value != 2) {
             System.out.println("testNoFindValue(): FAILURE");
             System.out.println("method was meant to return 2, but it returned: " + value);

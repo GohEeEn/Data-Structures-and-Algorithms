@@ -1,7 +1,5 @@
 package Tree;
 
-import Common.Position;
-
 public class ProperLinkedBinaryTreeTest {
 	
 	// TODO
@@ -18,6 +16,6 @@ public class ProperLinkedBinaryTreeTest {
         // Value assigned to any empty node by using replace() method with the reference to given position
         tree.replace(tree.root(), "ron");
         
-        System.out.println(tree.toTreeNode(tree.root()).left());
+        System.out.println(tree);
     }
 }

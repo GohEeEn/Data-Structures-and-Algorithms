@@ -6,8 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T> {
-    private Map<Position<T>, Integer> heights = new HashMap<Position<T>, Integer>();
-
+    
+	private Map<Position<T>, Integer> heights = new HashMap<Position<T>, Integer>();
+	
     public AVLTree() {
         tree = new ProperLinkedAVLBinaryTree<T>();
         size = 0;
@@ -16,7 +17,7 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
     @Override
     public T insert(T value) {
-        Position<T> current = locate(tree.root(), value);
+        Position<T> current = find(tree.root(), value);
         if (tree.isExternal(current)) {
             tree.expandExternal(current);
             tree.replace(current, value);
@@ -32,7 +33,7 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
     @Override
     public T remove(T value) {
-        Position<T> current = locate(tree.root(), value);
+        Position<T> current = find(tree.root(), value);
         if (tree.isExternal(current)) {
             return null;
         } else if (tree.isInternal(tree.left(current)) && tree.isInternal(tree.right(current))) {

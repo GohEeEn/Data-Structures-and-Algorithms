@@ -40,13 +40,13 @@ ADT | Definition
 <span style="color:blue;">int</span> size() | Return the number of elements in this tree
 <span style="color:blue;">T</span> replace(<span style="color:blue">Position<T\></span> p, <span style="color:blue;">T</span> e) | Replace the value of node at position p with value e, and return the *replaced value*
 
-## [Binary Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/BinaryTree.java)
+## <a name="#bt"> [Binary Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/BinaryTree.java) </a>
 
 > A **binary tree** is a tree with following properties :
 > * Each [node](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/TreeNode.java) has at most 2 children nodes
 > * A parent node n has 2 references to their children nodes, which is either a *left-child* or *right-child* of node n
 > * A *left-child is precedes to a right-child* in ordering of children node in a tree
-> * ![tree node](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/img/tree_node.jpg)
+> * ![tree node](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/img/tree_node.png)
 
 * A binary tree is either empty or combines of :
     * A **root node** r, which is the center of any binary tree
