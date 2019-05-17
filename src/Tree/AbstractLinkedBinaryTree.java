@@ -2,6 +2,7 @@ package Tree;
 
 import Common.Position;
 import Stack.ArrayStack;
+import Stack.LinkedStack;
 import Stack.Stack;
 import Vector.ArrayVector;
 import Vector.Vector;
@@ -43,25 +44,25 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
     @Override
     public Position<T> left(Position<T> p) {
         TreeNode<T> TreeNode = toTreeNode(p);
-        if (TreeNode.left == null) throw new InvalidPositionException("There is no left child");
-        return TreeNode.left;
+        if (TreeNode.left() == null) throw new InvalidPositionException("There is no left child");
+        return TreeNode.left();
     }
 
     @Override
     public Position<T> right(Position<T> p) {
         TreeNode<T> TreeNode = toTreeNode(p);
-        if (TreeNode.right == null) throw new InvalidPositionException("There is no right child");
-        return TreeNode.right;
+        if (TreeNode.right() == null) throw new InvalidPositionException("There is no right child");
+        return TreeNode.right();
     }
 
     @Override
     public boolean hasLeft(Position<T> p) {
-        return toTreeNode(p).left != null;
+        return toTreeNode(p).left() != null;
     }
 
     @Override
     public boolean hasRight(Position<T> p) {
-        return toTreeNode(p).right != null;
+        return toTreeNode(p).right() != null;
     }
 
     @Override
@@ -73,29 +74,29 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
     @Override
     public Position<T> parent(Position<T> p) {
         TreeNode<T> TreeNode = toTreeNode(p);
-        if (TreeNode.parent == null) throw new InvalidPositionException("There is no parent");
-        return TreeNode.parent;
+        if (TreeNode.parent() == null) throw new InvalidPositionException("There is no parent");
+        return TreeNode.parent();
     }
 
     @Override
     public Iterator<Position<T>> children(Position<T> p) {
         TreeNode<T> TreeNode = toTreeNode(p);
         Vector<Position<T>> vector = new ArrayVector<Position<T>>();
-        if (TreeNode.left != null) vector.insertAtRank(0, TreeNode.left);
-        if (TreeNode.right != null) vector.insertAtRank(0, TreeNode.right);
+        if (TreeNode.left() != null) vector.insertAtRank(0, TreeNode.left());
+        if (TreeNode.right() != null) vector.insertAtRank(0, TreeNode.right());
         return vector.iterator();
     }
 
     @Override
     public boolean isInternal(Position<T> p) {
         TreeNode<T> TreeNode = toTreeNode(p);
-        return TreeNode.left != null || TreeNode.right != null;
+        return TreeNode.left() != null || TreeNode.right() != null;
     }
 
     @Override
     public boolean isExternal(Position<T> p) {
         TreeNode<T> TreeNode = toTreeNode(p);
-        return TreeNode.left == null && TreeNode.right == null;
+        return TreeNode.left() == null && TreeNode.right() == null;
     }
 
     @Override
@@ -116,9 +117,8 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
     @Override
     public T replace(Position<T> p, T t) { // TODO
         TreeNode<T> TreeNode = toTreeNode(p);
-        T temp = TreeNode.element;
-        TreeNode.element = t;
-       //  System.out.println("temp : " + temp + " ; t : " + t);
+        T temp = TreeNode.element();
+        TreeNode.setElement(t);;
         return temp;
     }
 
@@ -132,7 +132,9 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
      */
     @Override
     public Iterator<Position<T>> positions() {
-        return new Iterator<Position<T>>() {
+        
+    	return new Iterator<Position<T>>() {
+        	
             Stack<TreeNode<T>> stack;
             TreeNode<T> current = root;
 
@@ -145,18 +147,13 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
             // This means that they should be used to implement common pieces
             // of initialisation code.
             {
-                // NOTE: I should use a LinkedStack here, but I am
-                // using an array stack because the LinkedStack is
-                // part of a practical, so releasing it would make
-                // it impossible for me to allow late submissions
-                // for practical 1.
-                stack = new ArrayStack<TreeNode<T>>(10000);
-
+            	stack = new LinkedStack<TreeNode<T>>();
+                
                 // Start by traversing to the left most
                 // TreeNode in the tree.
                 while (current != null) {
                     stack.push(current);
-                    current = current.left;
+                    current = current.left();
                 }
             }
 
@@ -172,11 +169,11 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
                 // Now find the next TreeNode:
                 // - go right (if a right child exists), then
                 // - keep going left until you cannot go further
-                if (TreeNode.right != null) {
-                    current = TreeNode.right;
+                if (TreeNode.right() != null) {
+                    current = TreeNode.right();
                     while (current != null) {
                         stack.push(current);
-                        current = current.left;
+                        current = current.left();
                     }
                 }
                 return TreeNode;
@@ -193,7 +190,9 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
      */
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
+       
+    	return new Iterator<T>() {
+        	
             Iterator<Position<T>> iterator = positions();
 
             @Override
@@ -216,10 +215,10 @@ public abstract class AbstractLinkedBinaryTree<T> implements BinaryTree<T> {
      */
     private void append(StringBuffer buf, TreeNode<T> TreeNode, String tabs) {
         buf.append(tabs);
-        buf.append(TreeNode.element);
+        buf.append(TreeNode.element());
         buf.append("\n");
-        if (TreeNode.left != null) append(buf, TreeNode.left, tabs+"\t");
-        if (TreeNode.right != null) append(buf, TreeNode.right, tabs+"\t");
+        if (TreeNode.left() != null) append(buf, TreeNode.left(), tabs+"\t");
+        if (TreeNode.right() != null) append(buf, TreeNode.right(), tabs+"\t");
     }
 
     public String toString() {

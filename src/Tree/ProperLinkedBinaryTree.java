@@ -10,7 +10,7 @@ import Common.Position;
 public class ProperLinkedBinaryTree<T> extends AbstractLinkedBinaryTree<T> {
     
 	public ProperLinkedBinaryTree() {
-        root = new TreeNode(null, null, null, null);
+        root = new TreeNode<T>(null, null, null, null);
         size = 1;
     }
 
@@ -23,11 +23,26 @@ public class ProperLinkedBinaryTree<T> extends AbstractLinkedBinaryTree<T> {
     	
         if (!isExternal(p)) throw new InvalidPositionException("Attempt to expand Internal node");
         TreeNode<T> node = toTreeNode(p);
-        node.left = new TreeNode(null, node, null, null);
-        node.right = new TreeNode(null, node, null, null);
+        node.setLeft(new TreeNode<T>(null, node, null, null));
+        node.setRight(new TreeNode<T>(null, node, null, null));
         size += 2;
     }
 
+    /**
+     * Overload expandExternal() method with initialized value assigned to both new children nodes
+     * @param p
+     * @param leftElem
+     * @param rightElem
+     */
+    public void expandExternal(Position<T> p, T leftElem, T rightElem) {
+    	
+    	if (!isExternal(p)) throw new InvalidPositionException("Attempt to expand Internal node");
+        TreeNode<T> node = toTreeNode(p);
+        node.setLeft(new TreeNode<T>(leftElem, node, null, null));
+        node.setRight(new TreeNode<T>(rightElem, node, null, null));
+        size += 2;
+    }
+    
     /**
      * Removal of child-node(s) of p , if p is an internal node (2 child)
      * @param p	Position reference to the target node 
@@ -37,16 +52,17 @@ public class ProperLinkedBinaryTree<T> extends AbstractLinkedBinaryTree<T> {
         if (isExternal(p)) throw new InvalidPositionException("Attempt to collapse external node");
         TreeNode<T> node = toTreeNode(p);
 
-        if (isInternal(node.left))
+        if (isInternal(node.left()))
             throw new InvalidPositionException("Attempt to collapse internal node with internal left child");
 
-        if (isInternal(node.right))
+        if (isInternal(node.right()))
             throw new InvalidPositionException("Attempt to collapse internal node with internal right child");
 
-        node.left.parent = null;
-        node.left = null;
-        node.right.parent = null;
-        node.right = null;
+        node.left().setParent(null);
+        node.setLeft(null);
+        node.right().setParent(null);
+        node.setRight(null);
+        
         size -= 2;
     }
 }

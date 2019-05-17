@@ -22,10 +22,10 @@ public class StandardLinkedBinaryTree<T> extends AbstractLinkedBinaryTree<T> {
      */
     public Position<T> insertLeft(Position<T> p, T element) {
         TreeNode<T> node = toTreeNode(p);
-        if (node.left != null) throw new InvalidPositionException("A left node already exists");
-        node.left = new TreeNode<T>(element, node, null, null);
+        if (node.left() != null) throw new InvalidPositionException("A left node already exists");
+        node.setLeft(new TreeNode<T>(element, node, null, null));
         size++;
-        return node.left;
+        return node.left();
     }
 
     /**
@@ -36,10 +36,10 @@ public class StandardLinkedBinaryTree<T> extends AbstractLinkedBinaryTree<T> {
      */
     public Position<T> insertRight(Position<T> p, T element) {
         TreeNode<T> node = toTreeNode(p);
-        if (node.right != null) throw new InvalidPositionException("A right node already exists");
-        node.right = new TreeNode<T>(element, node, null, null);
+        if (node.right() != null) throw new InvalidPositionException("A right node already exists");
+        node.setRight (new TreeNode<T>(element, node, null, null));
         size++;
-        return node.right;
+        return node.right();
     }
 
     /**
@@ -59,14 +59,14 @@ public class StandardLinkedBinaryTree<T> extends AbstractLinkedBinaryTree<T> {
         // - is it a right child of the parent?
         if (isRoot(p)) {
             root = null;
-        } else if (node.parent.left == node) {
-            node.parent.left = null;
-            node.parent = null;
+        } else if (node.parent().left() == node) {
+            node.parent().setLeft(null);
+            node.setParent(null);
         } else { // node.parent.right == node
-            node.parent.right = null;
-            node.parent = null;
+            node.parent().setRight(null);
+            node.setParent(null);
         }
         size--;
-        return node.element;
+        return node.element();
     }
 }

@@ -16,25 +16,25 @@ public class ProperLinkedBSTBinaryTree<T> extends ProperLinkedBinaryTree<T> {
         TreeNode<T> toRemove = toTreeNode(position);
         TreeNode<T> replacement;
         if (isInternal(right(position))) {
-            replacement = toRemove.right;
+            replacement = toRemove.right();
         } else {
-            replacement = toRemove.left;
+            replacement = toRemove.left();
         }
-        replacement.parent = toRemove.parent;
-        if (toRemove.parent.left == toRemove) {
-            toRemove.parent.left = replacement;
+        replacement.setParent(toRemove.parent());
+        if (toRemove.parent().left() == toRemove) {
+            toRemove.parent().setLeft(replacement);
         } else {
-            toRemove.parent.right = replacement;
+            toRemove.parent().setRight(replacement);
         }
         
-        toRemove.parent = null;
-        toRemove.right.parent = null;
-        toRemove.right = null;
-        toRemove.left = null;
+        toRemove.setParent(null);
+        toRemove.right().setParent(null);
+        toRemove.setRight(null);
+        toRemove.setLeft(null);
         
         size-=2;
         
-        return toRemove.element;
+        return toRemove.element();
     }
 
 }

@@ -1,5 +1,5 @@
 
-# [Vector](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Vector/Vector.java)
+# [Vector](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Vector/Vector.java)
 
 > It is a sequence ADT that supports the insertion, removal and accessing of objects based on **rank**
 
@@ -17,14 +17,14 @@ ADT | Description
 <span style="color:blue;">int</span> size() | Return the number of elements in the given vector
 
 ### Comparing Different Implementations :
-Base | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Vector/ArrayVector.java) | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Vector/LinkedVector.java)
+Base | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Vector/ArrayVector.java) | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Vector/LinkedVector.java)
 --|--|--
  Storing Method | In array and referenced with the object index corresponding to the rank | In two-way linked *nodes*
 Capacity | Finite (Unless using **expendable** array) | Infinite
 Elements order | By *array index* | Link to the *previous* and *next* objects in Vector, thus need auxiliary references for *front* and *rear* nodes
 Element Access Speed | Instant by using *array index* | Traverse through list needed, relatively slower (**O(n/2) time complexity in minimum**)
 ### ADT Runtime :
-Runtime  | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Vector/ArrayVector.java) | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Vector/LinkedVector.java)
+Runtime  | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Vector/ArrayVector.java) | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Vector/LinkedVector.java)
 --|--|--
 <span style="color:blue;">Obj</span> elemAtRank(<span style="color:blue;">int</span> r) | O(1) | O(n) [Traverse]
 <span style="color:blue;">Obj</span> replaceAtRank(<span style="color:blue;">int</span> r, <span style="color:blue;">Obj</span> e) | O(1) | O(n) [Traverse]
@@ -33,3 +33,4 @@ Runtime  | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorith
 <span style="color:blue;">boolean</span> isEmpty() | O(1) | O(1)
 <span style="color:blue;">int</span> size() | O(1) | O(1)
 
+Return to [main page](https://github.com/GohEeEn/Data-Structures-and-Algorithms)

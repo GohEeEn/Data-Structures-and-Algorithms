@@ -1,10 +1,11 @@
-# [Sequence](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Sequence/Sequence.java)
+# [Sequence](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Sequence/Sequence.java)
 
 > A combination of data structures Vector and List, which combines the *rank* and *position* based approaches for insertion and removal of objects
 
 * A sequence structure supports all the ADT included in both vector and list, and with *2 extra operations*
 
-### Abstract Data Type 
+## Abstract Data Type :
+
 ADT | Description
 --|--
 <span style="color:blue;">Position<T\></span> atRank(<span style="color:blue;">int</span> rank) | Returns the position at given *rank*
@@ -18,7 +19,7 @@ ADT | Description
     }
 ```
 
-## [Iterator](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Sequence/Iterator.java)
+## [Iterator](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Sequence/Iterator.java)
 
 > An ADT that encapsulates the *traversal through each element for both accessing or/and modifying* in a given sequence (including vector and list)
 

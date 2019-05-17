@@ -1,4 +1,4 @@
-# [List](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/List/List.java)
+# [List](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/List/List.java)
 
 > A structure that supports the insertion and removal of objects based on their **position** (reference)
 
@@ -20,6 +20,7 @@ ADT | Description
 <span style="color:blue;">int</span> size() | Return the *number of elements* in this list
 
 ### Traverse in List :
+
 Function | Description
 --|--
 <span style="color:blue;">Position<T\></span> first() | Return the reference to the **first position** in this list
@@ -28,8 +29,10 @@ Function | Description
 <span style="color:blue;">Position<T\></span> next(<span style="color:blue;">Position<T\></span> p) | Return the reference to the **next position** of position p in this list, **null** if it is the last element
 
 ### Comparing different implementations :
-Base | Array-Based | [Link-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/List/LinkedList.java)
+
+Base | Array-Based | [Link-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/List/LinkedList.java)
 --|--|--
 Storing objects | Stored in an *array of positions* with indexes included | Nodes are the *positions*
 Reference elements | By *array index* | Traverse through the list starts with the auxiliary node reference **front** and **rear** nodes (Doubly Linked List)
 
+Return to [main page](https://github.com/GohEeEn/Data-Structures-and-Algorithms)

@@ -1,4 +1,4 @@
-# [Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/Java/Tree.java)
+# [Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Tree.java)
 
 > A hierarchical ADT that the elements (*node*) stored are related in terms of **parent-child relationship** 
 
@@ -40,7 +40,40 @@ ADT | Definition
 <span style="color:blue;">int</span> size() | Return the number of elements in this tree
 <span style="color:blue;">T</span> replace(<span style="color:blue">Position<T\></span> p, <span style="color:blue;">T</span> e) | Replace the value of node at position p with value e, and return the *replaced value*
 
+## [Binary Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/BinaryTree.java)
 
+> A **binary tree** is a tree with following properties :
+> * Each [node](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/TreeNode.java) has at most 2 children nodes
+> * A parent node n has 2 references to their children nodes, which is either a *left-child* or *right-child* of node n
+> * A *left-child is precedes to a right-child* in ordering of children node in a tree
+> * ![tree node](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/img/tree_node.jpg)
 
+* A binary tree is either empty or combines of :
+    * A **root node** r, which is the center of any binary tree
+    * A **left-subtree** L, which is a subtree of root node r on its left hand side
+    * A **right-subtree** R, which is a subtree of root node r on its right hand side
 
+* Level Properties : 
+    * Level n of a binary tree is a set of elements with the *same depth n*, which has *at most **2<sup>n</sup>** of elements*
 
+* There are *4 extra operations* in binary tree besides of tree ADT
+
+### Abstract Data Type :
+
+ADT | Description
+--|--
+<span style="color:blue;">Position<T\></span> left(<span style="color:blue;">Position<T\></span> p) | Return the position of *left-child* of the given parent node p 
+<span style="color:blue;">Position<T\></span> right(<span style="color:blue;">Position<T\></span> p) | Return the position of *right-child* of the given parent node p 
+<span style="color:blue;">boolean</span> hasLeft(<span style="color:blue;">Position<T\></span> p) | Return a boolean that indicates if there is a *left-child* of given node p 
+<span style="color:blue;">boolean</span> hasRight(<span style="color:blue;">Position<T\></span> p) | Return a boolean that indicates if there is a *right-child* of given node p
+
+* There are 3 different type of binary trees in total, which is [standard binary tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/StandardLinkedBinaryTree.java) , [proper binary tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/ProperLinkedBinaryTree.java) and complete binary tree
+
+Base | [Standard](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/StandardLinkedBinaryTree.java) | [Proper](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Tree/ProperLinkedBinaryTree.java) | Complete
+--|--|--|--
+Definition | Standard form of binary tree, which allows the insertion and removal of elements in single-element form | A binary tree which is built by expanding an *external node (0 child)* to an *internal node (2 child)*, in other word every node here has either *degree 0 or 2* | A binary tree which has *at least all level set filled, except the last level that has all the internal node(s) on the left hand side*, and *at most 1 node has only a left-child*
+Insertion | Insert an *initialized single child node* in each operation | Insertion done by *expanding 2 empty node on both left and right child*, then value is assigned by using *replace()* operation | Insertion is done in single child node (left/right) and return an *external node as the last node reference for the next insertion point*
+Removal | Node removal is done by giving the position of target node, return the removed node value, and replaced by its *only child* (return error if there are *2 children nodes*) if it is an *internal node* | Node removal of a proper binary tree has 2 cases : <br/> 1. Given node v has *1 internal child*, then v and its external child will be removed and the position is replaced by the internal child <br/> 2. Remove both external child and remain node v when there are <br/> 3. Else error will be returned | Remove the **last node** of tree (pointed by reference) and return its value
+* Each removal methods mentioned above is to *maintain the defined tree structure* , regardless what value stored in removed node(s) , thus the users have to be caution to define the way of using them
+
+Return to [main page](https://github.com/GohEeEn/Data-Structures-and-Algorithms)

@@ -9,16 +9,16 @@ import Common.Position;
 public class TreeNode<T> implements Position<T> {
         
 	/** Value stored in node(s) */
-	public T element; 
+	private T element; 
 		
 	/** Node reference to the parent node */
-    public TreeNode<T> parent;
+    private TreeNode<T> parent;
         
     /** Node reference to the left-child node */
-    public TreeNode<T> left;
+    private TreeNode<T> left;
         
     /** Node reference to the right-child node */
-    public TreeNode<T> right;
+    private TreeNode<T> right;
 
     public TreeNode(T element, TreeNode<T> parent, TreeNode<T> left, TreeNode<T> right) {
     	this.element = element;
@@ -28,7 +28,13 @@ public class TreeNode<T> implements Position<T> {
     }
 
     @Override
-    public T element() {
-       return element;
-    }    
+    public T element() { return element;}    
+    public TreeNode<T> left(){ return this.left; }
+    public TreeNode<T> right(){ return this.right; }
+    public TreeNode<T> parent(){ return this.parent; }
+    
+    public void setElement(T element) { this.element = element; }
+    public void setLeft(TreeNode<T> left) { this.left = left; };
+    public void setRight(TreeNode<T> right) { this.right = right; };
+    public void setParent(TreeNode<T> parent) { this.parent = parent; };
 }

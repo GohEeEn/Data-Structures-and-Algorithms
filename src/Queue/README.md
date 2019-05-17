@@ -1,4 +1,4 @@
-# [Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Queue/Queue.java)
+# [Queue](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Queue/Queue.java)
 
 > A container of values / objects which does the insertion and removal of elements based on **First-In-First-Out (FIFO)** principle
 
@@ -19,10 +19,12 @@ ADT | Description
 <span style="color:blue;">int</span> size() | Return the size (total number of elements) of given stack
 <span style="color:blue;">boolean</span> isEmpty() | Return a boolean indicating if the queue is empty
 
-#### Comparing different implementaion :
+### Comparing different implementaion :
 
-Base | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Queue/ArrayQueue.java) | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/Java/Queue/LinkedListQueue.java)
+Base | [Array-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Queue/ArrayQueue.java) | [Linked-Based](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Queue/LinkedListQueue.java)
 --|--|--
 Capacity | Finite | Infinite
 Elements Order | Insertion begins at index *0* , while requires auxiliary values to keep track the index of *front* and *rear* of queue | Nodes maintain the ordering information, while it also need auxiliary references for *front* and *rear* nodes
-Runtime (For all *ADT*) | O(1) | O(1)
+Runtime (all *ADT*) | O(1) | O(1)
+
+Return to [main page](https://github.com/GohEeEn/Data-Structures-and-Algorithms)

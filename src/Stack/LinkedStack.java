@@ -24,7 +24,7 @@ public class LinkedStack<T> implements Stack<T>{
 	 * Default constructor :<br>
 	 * >> Declare a new linked-stack<br> 
 	 */
-	LinkedStack(){
+	public LinkedStack(){
 		this.head = null;
 		this.tail = null;
 		this.size = 0;
