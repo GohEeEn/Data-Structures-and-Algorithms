@@ -10,6 +10,11 @@
 >   * Example : *left-child <= parent <= right-child* for integer value
 
 ### Abstract Data Type :
+* Time Complexity : Let a binary search tree containing *n items* that has a *height h*, 
+    * Space : O(n) , as there are n items
+    * Time  : O(h) , for each operations that proportional to the searching height required
+        * Worst Case : O(n), which all nodes lay on the same side
+        * Best Case  : O(log n), which when the tree is *balanced*
 
 ADT | Description
 --|--
