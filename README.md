@@ -16,3 +16,9 @@ Data Structure | Description
 [Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Tree) | A hierarchical ADT where data / elements are related in terms of **parent-child relationships**
 [Binary Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Tree#bt) | A tree structure which has their individual node **at most 2 children nodes**, as the reference of *left and right* children nodes
 [Binary Search Tree](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/BinarySearchTree) | A binary tree which individual node stores a unique value, and the relationship between parent and children nodes is defined in a total-order relation as <br> ***left-child ~ parent ~ right-child*** 
+
+No | Classes
+--|--
+1. | [Sorting Algorithms](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Sorting_Algorithms)
+2. | [Pattern Matching]() 
+3. | [Searching Algorithms](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Searching_Algorithms)

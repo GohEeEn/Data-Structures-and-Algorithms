@@ -16,7 +16,7 @@
 
     ### 1. [Merge Sort](https://github.com/GohEeEn/Data-Structures-and-Algorithms/blob/master/src/Sorting_Algorithms/MergeSort.java)
     
-    > A *co mparison* divide-and-conquer sorting algorithm, that divides an input sequence into halves and merge them after sorting
+    > A *comparison* divide-and-conquer sorting algorithm, that divides an input sequence into halves and merge them after sorting
 
     Assume an input sequence S with n elements :
     Process | Description | Runtime 
