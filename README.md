@@ -23,3 +23,8 @@ Implementation of common data structures and algorithms in Java
 | 1.  | [Sorting Algorithms](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Sorting_Algorithms)     |
 | 2.  | [Pattern Matching]()                                                                                                   |
 | 3.  | [Searching Algorithms](https://github.com/GohEeEn/Data-Structures-and-Algorithms/tree/master/src/Searching_Algorithms) |
+
+## Notes
+
+- This repository is **NOT** longer maintained
+- Open to **fork** this repo and develop yourself freely
